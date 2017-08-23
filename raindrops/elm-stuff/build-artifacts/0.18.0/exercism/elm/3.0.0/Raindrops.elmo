@@ -1,0 +1,45 @@
+var _exercism$elm$Raindrops$raindrops = function (num) {
+	var factorOf = F2(
+		function (num, factor) {
+			return _elm_lang$core$Native_Utils.eq(
+				A2(_elm_lang$core$Basics_ops['%'], num, factor),
+				0);
+		});
+	var plong = function (n) {
+		return _elm_lang$core$Native_Utils.eq(
+			A2(_elm_lang$core$Basics_ops['%'], n, 7),
+			0) ? 'Plong' : '';
+	};
+	var plang = function (n) {
+		return _elm_lang$core$Native_Utils.eq(
+			A2(_elm_lang$core$Basics_ops['%'], n, 5),
+			0) ? 'Plang' : '';
+	};
+	var pling = function (n) {
+		return _elm_lang$core$Native_Utils.eq(
+			A2(_elm_lang$core$Basics_ops['%'], n, 3),
+			0) ? 'Pling' : '';
+	};
+	return A2(
+		_elm_lang$core$List$any,
+		factorOf(num),
+		{
+			ctor: '::',
+			_0: 3,
+			_1: {
+				ctor: '::',
+				_0: 5,
+				_1: {
+					ctor: '::',
+					_0: 7,
+					_1: {ctor: '[]'}
+				}
+			}
+		}) ? A2(
+		_elm_lang$core$Basics_ops['++'],
+		pling(num),
+		A2(
+			_elm_lang$core$Basics_ops['++'],
+			plang(num),
+			plong(num))) : _elm_lang$core$Basics$toString(num);
+};

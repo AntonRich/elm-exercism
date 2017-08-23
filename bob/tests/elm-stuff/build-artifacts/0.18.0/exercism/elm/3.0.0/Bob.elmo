@@ -1,0 +1,25 @@
+var _exercism$elm$Bob$hey = function (str) {
+	var isSilence = function (str) {
+		return _elm_lang$core$Native_Utils.eq(
+			_elm_lang$core$String$trim(str),
+			'');
+	};
+	var isShout = function (str) {
+		return A2(
+			_elm_lang$core$Regex$contains,
+			_elm_lang$core$Regex$regex('[A-Z]'),
+			str) && (!A2(
+			_elm_lang$core$Regex$contains,
+			_elm_lang$core$Regex$regex('[a-z]'),
+			str));
+	};
+	var hasLetter = function (str) {
+		return A2(
+			_elm_lang$core$Regex$contains,
+			_elm_lang$core$Regex$regex('[a-zA-z]'),
+			str);
+	};
+	return isSilence(str) ? 'Fine. Be that way!' : ((A2(_elm_lang$core$String$endsWith, '?', str) && (!isShout(str))) ? 'Sure.' : ((!hasLetter(str)) ? 'Whatever.' : (_elm_lang$core$Native_Utils.eq(
+		_elm_lang$core$String$toUpper(str),
+		str) ? 'Whoa, chill out!' : 'Whatever.')));
+};

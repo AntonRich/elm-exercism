@@ -1,0 +1,21 @@
+var _exercism$elm$Leap$isLeapYear = function (year) {
+	var divisibleBy = F2(
+		function (n, y) {
+			return _elm_lang$core$Native_Utils.eq(
+				A2(_elm_lang$core$Basics$rem, y, n),
+				0);
+		});
+	return A2(
+		_elm_lang$core$Basics$xor,
+		A2(divisibleBy, 4, year),
+		A2(divisibleBy, 100, year)) || A2(divisibleBy, 400, year);
+};
+var _exercism$elm$Leap$isLeapYeark = function (year) {
+	var divisibleBy = F2(
+		function (n, y) {
+			return _elm_lang$core$Native_Utils.eq(
+				A2(_elm_lang$core$Basics$rem, y, n),
+				0);
+		});
+	return A2(divisibleBy, 4, year) && ((!A2(divisibleBy, 100, year)) || A2(divisibleBy, 400, year));
+};

@@ -1,0 +1,3 @@
+var _exercism$elm$Pangram$isPangram = function (str) {
+	return _elm_lang$core$Native_Utils.eq(str, '');
+};

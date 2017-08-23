@@ -1,0 +1,4 @@
+var _exercism$elm$Accumulate$accumulate = F2(
+	function (fn, list) {
+		return A2(_elm_lang$core$List$map, fn, list);
+	});
